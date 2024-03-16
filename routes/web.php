@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/home/home');
+    return view('pages/home/home');
 });
 
 Route::middleware('only_guest')->group(function () {
