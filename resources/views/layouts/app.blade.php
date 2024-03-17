@@ -48,7 +48,7 @@
                   <summary>Muhammad Rizky</summary>
                   <ul>
                     <li><a>Profile</a></li>
-                    <li><a>Log out</a></li>
+                    <li><a href="/logout">Log out</a></li>
                   </ul>
                 </details>
               </li>
