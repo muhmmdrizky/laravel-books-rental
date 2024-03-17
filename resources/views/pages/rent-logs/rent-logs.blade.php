@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Rent Log')
+@section('title', 'Rent Logs')
 
 @section('content')
 <div class="text-sm text-gray-900 breadcrumbs py-5">
   <ul>
     <li><a>Dashboard</a></li>
-    <li>Rent Log</li>
+    <li>Rent Logs</li>
   </ul>
 </div>
 
