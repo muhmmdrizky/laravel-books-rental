@@ -37,7 +37,7 @@ class AuthController extends Controller
                 return redirect('pages/dashboard/dashboard');
             }
             if (Auth::user()->role_id == 2) {
-                return redirect('pages/dashboard/dashboard');
+                return redirect('pages/users/profile');
             }
         }
         Session::flash('status', 'failed');
