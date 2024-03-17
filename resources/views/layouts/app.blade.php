@@ -32,7 +32,7 @@
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li>
           <details>
-            <summary class="font-semibold">{{ Auth::user()->username}}</summary>
+            <summary class="font-semibold">{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</summary>
             <ul>
               <li><a>Profile</a></li>
               <li><a href="/logout">Logout</a></li>
@@ -59,7 +59,7 @@
               @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
               <li>
                 <details>
-                  <summary>{{ Auth::user()->username}}</summary>
+                  <summary>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</summary>
                   <ul>
                     <li><a>Profile</a></li>
                     <li><a href="/logout">Logout</a></li>
