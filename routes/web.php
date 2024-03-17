@@ -35,4 +35,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/pages/users/profile', [UserController::class, 'profile']);
     Route::get('/pages/books/books', [BookController::class, 'index']);
     Route::get('/pages/categories/categories', [CategoryController::class, 'index']);
+    Route::get('/pages/users/users', [UserController::class, 'index']);
 });
