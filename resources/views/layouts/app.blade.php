@@ -13,25 +13,33 @@
 </head>
 
 <body>
-  <header class="w-full border border-b-[1px] border-gray-200">
+  <header class="w-full border-b-[1px] border-gray-200">
     <nav class="flex container justify-between items-center m-auto p-5 px-14 bg-white">
       <div class="text-xl py-1 px-3 font-kanit font-bold bg-white text-gray-900 border-2 border-gray-900 rounded-md shadow-[8px_8px_0px_0px]">
         <a href="">#bacabuku</a>
       </div>
+
       <ul class="menu hidden lg:menu-horizontal bg-white rounded-box text-gray-900">
+        @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li><a>Dashboard</a></li>
         <li><a href="/pages/books/books">Books</a></li>
         <li><a>Categories</a></li>
+        @endif
+        @if (Auth::user()->role_id === 1)
+        <li><a>Rent Log</a></li>
         <li><a>Users</a></li>
+        @endif
+        @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li>
           <details>
-            <summary class="font-semibold">Muhammad Rizky</summary>
+            <summary class="font-semibold">{{ Auth::user()->username}}</summary>
             <ul>
               <li><a>Profile</a></li>
               <li><a href="/logout">Log out</a></li>
             </ul>
           </details>
         </li>
+        @endif
       </ul>
 
       <ul class="menu lg:hidden text-gray-900">
@@ -39,19 +47,26 @@
           <details>
             <summary>Menu</summary>
             <ul class="border-0">
+              @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
               <li><a>Dashboard</a></li>
               <li><a>Books</a></li>
               <li><a>Categories</a></li>
+              @endif
+              @if (Auth::user()->role_id === 1)
               <li><a>Users</a></li>
+              <li><a>Rent Log</a></li>
+              @endif
+              @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
               <li>
                 <details>
-                  <summary>Muhammad Rizky</summary>
+                  <summary>{{ Auth::user()->username}}</summary>
                   <ul>
                     <li><a>Profile</a></li>
                     <li><a href="/logout">Log out</a></li>
                   </ul>
                 </details>
               </li>
+              @endif
             </ul>
           </details>
         </li>

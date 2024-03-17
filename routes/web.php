@@ -30,7 +30,7 @@ Route::middleware('only_guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout']);
-    Route::get('/pages/dashboard/dashboard', [DashboardController::class, 'index'])->middleware('only_admin');
-    Route::get('/pages/users/profile', [UserController::class, 'profile'])->middleware('only_client');
+    Route::get('/pages/dashboard/dashboard', [DashboardController::class, 'index']);
+    Route::get('/pages/users/profile', [UserController::class, 'profile']);
     Route::get('/pages/books/books', [BookController::class, 'index']);
 });
