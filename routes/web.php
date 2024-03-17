@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RentLogController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,5 +36,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/pages/users/profile', [UserController::class, 'profile']);
     Route::get('/pages/books/books', [BookController::class, 'index']);
     Route::get('/pages/categories/categories', [CategoryController::class, 'index']);
+    Route::get('/pages/rent-logs/rent-logs', [RentLogController::class, 'index']);
     Route::get('/pages/users/users', [UserController::class, 'index']);
 });
