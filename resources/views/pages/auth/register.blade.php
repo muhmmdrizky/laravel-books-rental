@@ -35,6 +35,16 @@
     <form action="" method="POST">
       @csrf
       <div class="flex flex-col p-3">
+        <span class="text-sm font-semibold">First Name</span>
+        <input type="text" name="firstname" value="{{ old('firstname') }}" placeholder="Type here" class="input input-bordered w-full my-2" />
+        <span class="text-sm text-gray-500">Please enter your first name</span>
+      </div>
+      <div class="flex flex-col p-3">
+        <span class="text-sm font-semibold">Last Name</span>
+        <input type="text" name="lastname" value="{{ old('lastname') }}" placeholder="Type here" class="input input-bordered w-full my-2" />
+        <span class="text-sm text-gray-500">Please enter your last name</span>
+      </div>
+      <div class="flex flex-col p-3">
         <span class="text-sm font-semibold">Username</span>
         <input type="text" name="username" value="{{ old('username') }}" placeholder="Type here" class="input input-bordered w-full my-2" />
         <span class="text-sm text-gray-500">Please enter your username</span>
