@@ -25,11 +25,11 @@
         @endif
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li><a href="/pages/books/books">Books</a></li>
-        <li><a>Categories</a></li>
+        <li><a href="/pages/categories/categories">Categories</a></li>
         @endif
         @if (Auth::user()->role_id === 1)
-        <li><a>Rent Log</a></li>
-        <li><a>Users</a></li>
+        <li><a href="/pages/rent-logs/rent-logs">Rent Log</a></li>
+        <li><a href="/pages/users/users">Users</a></li>
         @endif
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li>
