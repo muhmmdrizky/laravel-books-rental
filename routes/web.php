@@ -28,10 +28,9 @@ Route::middleware('only_guest')->group(function () {
     Route::post('/pages/auth/register', [AuthController::class, 'registerProcess']);
 });
 
-
 Route::middleware('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout']);
-    Route::get('/pages/dashboard/dashboard', [DashboardController::class, 'index']);
+    Route::get('/pages/dashboard/dashboard', [DashboardController::class, 'index'])->middleware('only_admin');
     Route::get('/pages/users/profile', [UserController::class, 'profile']);
     Route::get('/pages/books/books', [BookController::class, 'index']);
 });
