@@ -20,8 +20,10 @@
       </div>
 
       <ul class="menu hidden lg:menu-horizontal bg-white rounded-box text-gray-900">
-        @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
+        @if (Auth::user()->role_id === 1)
         <li><a>Dashboard</a></li>
+        @endif
+        @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li><a href="/pages/books/books">Books</a></li>
         <li><a>Categories</a></li>
         @endif
@@ -47,8 +49,10 @@
           <details>
             <summary>Menu</summary>
             <ul class="border-0">
-              @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
+              @if (Auth::user()->role_id === 1)
               <li><a>Dashboard</a></li>
+              @endif
+              @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
               <li><a>Books</a></li>
               <li><a>Categories</a></li>
               @endif
