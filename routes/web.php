@@ -28,6 +28,7 @@ Route::middleware('only_guest')->group(function () {
     Route::post('/pages/auth/register', [AuthController::class, 'registerProcess']);
 });
 
+
 Route::middleware('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout']);
     Route::get('/pages/dashboard/dashboard', [DashboardController::class, 'index']);
