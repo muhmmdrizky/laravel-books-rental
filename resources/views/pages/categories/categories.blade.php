@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'Categories')
 
 @section('content')
 <div class="text-sm text-gray-900 breadcrumbs py-5">
