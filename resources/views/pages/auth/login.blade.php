@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="w-2/3 sm:w-2/4 md:w-2/5 lg:w-1/3  m-auto mt-24 rounded-lg shadow-md border border-gray-200 p-3">
+  <div class="w-2/3 sm:w-2/4 md:w-2/5 lg:w-1/3 m-auto mt-24 rounded-lg shadow-md border border-gray-200 p-3">
     <div class="flex justify-between mx-2">
       <a class="text-sm text-gray-500" href="/">Home</a>
       <a class="text-sm text-gray-500" href="register">Register</a>
