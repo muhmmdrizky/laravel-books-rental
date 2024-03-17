@@ -6,8 +6,6 @@
 <div class="text-sm text-gray-900 breadcrumbs py-5">
   <ul>
     <li><a>Dashboard</a></li>
-    <li><a>Documents</a></li>
-    <li>Add Document</li>
   </ul>
 </div>
 <div class="flex flex-col lg:flex-row gap-5">
