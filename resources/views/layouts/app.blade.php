@@ -35,7 +35,7 @@
             <summary class="font-semibold">{{ Auth::user()->username}}</summary>
             <ul>
               <li><a>Profile</a></li>
-              <li><a href="/logout">Log out</a></li>
+              <li><a href="/logout">Logout</a></li>
             </ul>
           </details>
         </li>
@@ -62,7 +62,7 @@
                   <summary>{{ Auth::user()->username}}</summary>
                   <ul>
                     <li><a>Profile</a></li>
-                    <li><a href="/logout">Log out</a></li>
+                    <li><a href="/logout">Logout</a></li>
                   </ul>
                 </details>
               </li>
