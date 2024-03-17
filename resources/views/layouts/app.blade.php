@@ -21,7 +21,7 @@
 
       <ul class="menu hidden lg:menu-horizontal bg-white rounded-box text-gray-900">
         @if (Auth::user()->role_id === 1)
-        <li><a>Dashboard</a></li>
+        <li><a href="/pages/dashboard/dashboard">Dashboard</a></li>
         @endif
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li><a href="/pages/books/books">Books</a></li>
