@@ -19,17 +19,17 @@
         <a href="">#bacabuku</a>
       </div>
 
-      <ul class="menu hidden lg:menu-horizontal bg-white rounded-box text-gray-900">
+      <ul class="menu hidden lg:menu-horizontal bg-white rounded-box text-gray-900 gap-2">
         @if (Auth::user()->role_id === 1)
-        <li><a href="/pages/dashboard/dashboard">Dashboard</a></li>
+        <li><a @if(request()->route()->uri == 'pages/dashboard/dashboard') class="font-bold bg-gray-900 text-white hover:bg-gray-900" @endif href="/pages/dashboard/dashboard">Dashboard</a></li>
         @endif
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
-        <li><a href="/pages/books/books">Books</a></li>
-        <li><a href="/pages/categories/categories">Categories</a></li>
+        <li><a @if(request()->route()->uri == 'pages/books/books') class="font-bold bg-gray-900 text-white hover:bg-gray-900" @endif href="/pages/books/books">Books</a></li>
+        <li><a @if(request()->route()->uri == 'pages/categories/categories') class="font-bold bg-gray-900 text-white hover:bg-gray-900" @endif href="/pages/categories/categories">Categories</a></li>
         @endif
         @if (Auth::user()->role_id === 1)
-        <li><a href="/pages/rent-logs/rent-logs">Rent Log</a></li>
-        <li><a href="/pages/users/users">Users</a></li>
+        <li><a @if(request()->route()->uri == 'pages/rent-logs/rent-logs') class="font-bold bg-gray-900 text-white hover:bg-gray-900" @endif href="/pages/rent-logs/rent-logs">Rent Log</a></li>
+        <li><a @if(request()->route()->uri == 'pages/users/users') class="font-bold bg-gray-900 text-white hover:bg-gray-900" @endif href="/pages/users/users">Users</a></li>
         @endif
         @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2)
         <li>
